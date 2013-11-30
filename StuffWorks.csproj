@@ -46,6 +46,8 @@
     <Compile Include="c2_Automobiles.cs" />
     <Compile Include="c4_CollectionsHelpers.cs" />
     <Compile Include="c3_FileStuff.cs" />
+    <Compile Include="Complexity.cs" />
+    <Compile Include="Miscellaneous.cs" />
     <Compile Include="StringHelpers.cs" />
     <Compile Include="OOConcepts.cs" />
     <Compile Include="c1_Program.cs" />

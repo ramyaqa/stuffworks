@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// Note the new name space . Note the name space in other files where it is stuff works. Name space is like a bag. 
-// you have to use the bag using using statement. Q: what is the other way you can use "using" keyword? 
+// Note the new name space . Note the namespace in other files where it is stuff works. Name space is like a bag. 
+// if you have to use the class in the namespace, then include the namespace with 'using <your_namespace>' statement. 
+//Q: what is the other way you use "using" keyword? 
 namespace Automobiles
 {
     /// <summary>
@@ -34,6 +35,7 @@ namespace Automobiles
     ///         If a method returns a value, you need to specify a type of the value returned. Example:  string GetMake() returns the make of the car where make is a string type
     ///     Method that does some work but do not return anything
     ///         If a methods returns nothing, you need to specify a "void". Example: void StartMyCar() return nothing but could do a lot of things like starting the car.
+    ///     Method takes in parameters. They can be value types or reference types Can you pass another function as a parameter?
     ///         
     /// 
     /// What is an Object?
