@@ -55,5 +55,63 @@ namespace StuffWorks
             stringBuilder.Append(string1);
             return stringBuilder;
         }
+
+
+        public static string ReverseStringUsingLib(string str)
+        {
+            char [] reversedCharOfString = str.Reverse().ToArray();
+            string reversedStr = string.Join("", reversedCharOfString);
+            return reversedStr;
+        }
+
+        public static string ReverseStringUsingOneVariable(string str)
+        {
+            string reversedStr = null;
+            char[] strCharArray = str.ToCharArray();
+            char tempChar;
+            for (int i = 0; i <= strCharArray.Length / 2; i++)
+            {
+                tempChar = str[i];
+                strCharArray[i] = strCharArray[str.Length - i + 1];
+                strCharArray[str.Length - i + 1] = tempChar;
+
+            }
+            reversedStr = string.Join("", strCharArray);
+            return reversedStr;
+        }
+
+        public static string ReverseStringWithNoExtraVariable(string str)
+        {
+            string reversedStr = null;
+            char[] strCharArray = str.ToCharArray();
+            for (int i = 0; i <= strCharArray.Length / 2; i++)
+            {
+                BitWiseSwapChar(ref strCharArray[i], ref strCharArray[str.Length - i + 1]);
+            }
+            reversedStr = string.Join("", strCharArray);
+            return reversedStr;
+        }
+
+        public static void BitWiseSwapChar(ref char a, ref char b)
+        {
+            a = (char)((int)a + (int)b);
+            b = (char)((int)a - (int)b);
+            a = (char)((int)a - (int)b);
+        }
+
+        public static void BitWiseSwap(ref int a, ref int b)
+        {
+            a ^= b;
+            b ^= a;
+            a ^= b;
+        }
+
+        public static void ArithmeticSwap(ref int a, ref int b)
+        {
+            //a = 10; b= 20
+            a = a + b; // a = 10 + 20 = 30
+            b = a - b; // b = 30 - 20 = 10
+            a = a - b; // a = 30 - 10 = 20;
+        }
     }
 }
